@@ -1,7 +1,7 @@
 # easy-terminal-app 1.0 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
-This "mini bash app" is ment for replacing endless switch-case instructions in controll scripts and reinventing the wheel again and again.
+This **terminal application skeleton** is ment for replacing endless switch-case instructions in controll scripts and reinventing the wheel again and again.
 
 It is **minimal** because it only depends on standard bash.
 
