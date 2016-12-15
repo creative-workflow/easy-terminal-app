@@ -1,5 +1,5 @@
 # easy-terminal-app 1.0 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
-A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell)-scripting friends =)
+A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
 It is **minimal** because it only depends on standard bash.
 
