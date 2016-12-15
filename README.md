@@ -17,9 +17,25 @@ It has **maximal comfort** because:
   3. ensure all files are executable `chmod +x ./scripts/* ./app ./bootstrap`
   4. run `./app help`
 
+# Usage
+```
+Usage: ./app [command] [help|*] 
+Available commands: 
+ du                     show diskusage
+ help                   print help
+ logs                   show app logs
+ ps                     show running processes
+ test                   run tests
+
+Available libs: 
+ color                  helps dealing with colors in terminal
+ command                helps dispatching commands in scripts/commands/*
+ log                    helps dealing with log files
+ os                     helps detecting current os, exports $is_osx, $is_win, $is_li
+```
+
 # Add new command
 Create a new file in the folder `scripts/commands` named `ls` and add the following lines:
-
 ```
 #!/bin/bash
 
