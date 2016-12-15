@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#lib-info: helps detecting current os, exports $is_osx, $is_win, $is_linux
+
+os_name=$(uname -s)
+
+is_osx=0
+is_win=0
+is_linux=0
+
+# feel free to add https://en.wikipedia.org/wiki/Uname#Examples
+case "$os_name" in
+  Darwin)
+    is_osx=1
+  ;;
+  Linux)
+    is_linux=1
+  ;;
+  CYGWIN*|MINGW32*|MSYS*)
+    is_win=1
+  ;;
+esac

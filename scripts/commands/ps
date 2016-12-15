@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#command-info: show running processes
+
+source bootstrap
+
+# simply call ps
+ps ax

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#lib-info: helps dealing with colors in terminal
+
+white=$'\e[0;0m'
+red=$'\e[0;31m'
+green=$'\e[0;32m'
+orange=$'\e[0;33m'
+
+color_reset=$'\e[0m'
+
+function green {
+  echo -e "$green$1 $color_reset"
+}
+
+function red {
+  echo -e "$red$1 $color_reset"
+}
+
+function orange {
+  echo -e "$orange$1 $color_reset"
+}
+
+function white {
+  echo -e "$white$1 $color_reset"
+}
+
+function newline {
+  echo ''
+}

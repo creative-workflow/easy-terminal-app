@@ -1,0 +1,72 @@
+#!/bin/bash
+
+#lib-info: helper for tests
+
+source "$TERMINAL_APP_LIB_PATH/color"
+
+TEST_ERRORS=''
+TEST_COUNT=0
+TEST_ERROR_COUNT=0
+TEST_SUCCESS_COUNT=0
+function test_before_suite {
+  TEST_ERRORS=''
+  TEST_COUNT=0
+  TEST_ERROR_COUNT=0
+  TEST_SUCCESS_COUNT=0
+}
+
+function test_after_suite {
+  newline
+  general_message="$TEST_SUCCESS_COUNT/$TEST_COUNT passed"
+
+  if [ "x$TEST_ERRORS" == "x" ] ; then
+    green "$general_message"
+
+    exit 0
+  else
+    red "$general_message"
+    red "Failed: "
+    red "$TEST_ERRORS"
+
+    exit 0
+  fi
+}
+
+function test_run_suite {
+  test_before_suite
+  for test_path in "$TERMINAL_APP_TEST_PATH"/*
+  do
+    test_exec_command $test_path
+  done
+  test_after_suite
+}
+
+function test_exec_command {
+  test_command=$1
+
+  green "running test: $test_command"
+
+  $test_command
+
+  if [ $? -ne 0 ]; then
+    test_add_error "   $test_command exited with code $?"
+  else
+    test_add_success "OK: $test_command"
+  fi
+
+}
+
+function test_add_error {
+  ((++TEST_COUNT))
+  ((++TEST_ERROR_COUNT))
+  TEST_ERRORS="$TEST_ERRORS\n$1"
+  newline
+  log_error "$1"
+}
+
+function test_add_success {
+  ((++TEST_COUNT))
+  ((++TEST_SUCCESS_COUNT))
+  newline
+  log_info "$1"
+}

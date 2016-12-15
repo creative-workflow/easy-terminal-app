@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#command-info: show diskusage
+
+#command-help: usage: ./app du [path='.']
+
+source bootstrap
+
+if [ "x$1" == "x" ] ; then
+  # if no arg given: use current path
+  path='.'
+else
+  # else set path to given arg
+  path=$1
+fi
+
+
+if [[ $is_osx == 1 ]] ; then
+  # osx version of du, see scripts/lib/os
+  du -h -d 3 $path
+else
+  # unix version of du, see scripts/lib/os
+  du -h --max-depth=1 $path
+fi

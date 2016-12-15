@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#lib-info: helps dealing with log files
+
+source "$TERMINAL_APP_LIB_PATH/color"
+
+function write_log {
+  if [ $TERMINAL_APP_LOG_ENABLED == 1 ] ; then
+    log_set_current_file
+    now=$(date +"%H:%I:%S")
+
+    echo "[$now] $1" >> "$TERMINAL_APP_LOG_FILE"
+  fi
+}
+
+function log_debug {
+  orange "$1"
+  write_log "debug - $1"
+}
+
+function log_info {
+  green "$1"
+  write_log "info - $1"
+}
+
+function log_error {
+  red "$1"
+  write_log "error - $1"
+}
+
+function log_set_current_file {
+  mkdir -p "$TERMINAL_APP_LOG_PATH"
+  day=$(date +"%m_%d_%Y")
+  export TERMINAL_APP_LOG_FILE="$TERMINAL_APP_LOG_PATH/$day.app.log"
+  touch "$TERMINAL_APP_LOG_FILE"
+}
+
+# initial set log file for other scripts
+log_set_current_file

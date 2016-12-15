@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#command-info: print help
+
+source bootstrap
+
+orange 'Usage: ./app [command] [help|*]'
+green 'Available commands:'
+
+# list all available commands
+for command in "$TERMINAL_APP_COMMAND_PATH"/*
+do
+  # print command info
+  command_print_info $command
+done
+
+newline
+green 'Available libs:'
+
+# list all available lib files
+for lib in "$TERMINAL_APP_LIB_PATH"/*
+do
+  # if not scripts/lib/lib file
+  if [ "$lib" != "$TERMINAL_APP_LIB_PATH/lib" ] ; then
+    # print lib info
+    lib_print_info $lib
+  fi
+done

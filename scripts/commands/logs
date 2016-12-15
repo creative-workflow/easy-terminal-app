@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#command-info: show app logs
+
+#command-help: usage: ./app logs [command]
+#command-help:
+#command-help: commands:
+#command-help:   cat   (see ´man cat´)
+#command-help:   head  (see ´man tail´)
+#command-help:   tail  (see ´man tail´, *default)
+
+source bootstrap
+
+# ensure the logfile exists and set path, see scripts/lib/log
+log_set_current_file
+
+sub_command=$2
+
+# dispatch sub command
+case "$sub_command" in
+  head)
+    head "${@:2}" "$TERMINAL_APP_LOG_FILE"
+  ;;
+  cat)
+    cat "${@:2}" "$TERMINAL_APP_LOG_FILE"
+  ;;
+  tail|*)
+    tail "${@:2}" "$TERMINAL_APP_LOG_FILE"
+  ;;
+esac

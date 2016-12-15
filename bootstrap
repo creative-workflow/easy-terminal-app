@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# set config variables
+export TERMINAL_APP_PATH='scripts'
+export TERMINAL_APP_LOG_PATH='logs'
+export TERMINAL_APP_LIB_PATH="$TERMINAL_APP_PATH/lib"
+export TERMINAL_APP_TEST_PATH="$TERMINAL_APP_PATH/test"
+export TERMINAL_APP_COMMAND_PATH="$TERMINAL_APP_PATH/commands"
+
+export TERMINAL_APP_LOG_ENABLED=1
+
+# load lib scripts
+source "$TERMINAL_APP_LIB_PATH/os"
+source "$TERMINAL_APP_LIB_PATH/color"
+source "$TERMINAL_APP_LIB_PATH/command"
+source "$TERMINAL_APP_LIB_PATH/log"
+source "$TERMINAL_APP_LIB_PATH/lib"

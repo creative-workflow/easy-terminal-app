@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#test-info: execute ./app help without error exit code
+
+source bootstrap
+
+./app help

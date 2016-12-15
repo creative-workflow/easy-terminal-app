@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#lib-info: helps dispatching commands in scripts/commands/*
+
+source "$TERMINAL_APP_LIB_PATH/color"
+
+function command_print_info {
+  command_path=$1
+  command_name=$( basename $1 )
+  command_info=$( cat "$command_path" | grep 'command-info:' )
+
+  space='                     '
+  printf "$orange %s %s ${command_info:15:60}$color_reset\n" "$command_name" "${space:${#command_name}}"
+}
+
+function command_print_help {
+  command_path=$1
+  command_name=$( basename $1 )
+  command_info=$( cat "$command_path" | grep 'command-info:' )
+  command_help=$( cat "$command_path" | grep 'command-help:' )
+
+  green "${command_info:15:60}"
+  newline
+  while read -r line; do
+      orange "${line:15:60}"
+  done <<< "$command_help"
+}
+
+function command_exec {
+  command_name=$1
+  command_path="$TERMINAL_APP_COMMAND_PATH/$command_name"
+
+  # if command doesnt exist: print usage
+  if [ ! -f $command_path ]; then
+      red "command not found: $command_path"
+      command_exec 'help'
+      exit 1
+  fi
+
+  # if second arg is help
+  if [ "$2" == "help" ] ; then
+      command_print_help $command_path
+  fi
+
+  log_info "running command: $@"
+  newline
+
+  $command_path ${@:2}
+}

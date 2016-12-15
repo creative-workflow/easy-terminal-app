@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#command-info: run tests
+
+source bootstrap
+
+source "$TERMINAL_APP_LIB_PATH/test"
+
+test_run_suite
