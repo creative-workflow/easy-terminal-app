@@ -8,7 +8,7 @@ It has **maximal comfort** because:
   * has build in help and command listening
   * parses comments from your command file
   * has logging and colored output out of the box
-  * has a test infrstructure
+  * has a test infrastructure
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract into your project folder
