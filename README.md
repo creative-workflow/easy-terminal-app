@@ -1,4 +1,4 @@
-# easy-terminal-app 1.0
+# easy-terminal-app 1.0 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell)-scripting friends =)
 
 It is **minimal** because it only depends on standard bash.
@@ -12,7 +12,7 @@ It has **maximal comfort** because:
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract into your project folder
-  2. ensure all files are executable `chmod +x ./scripts/* ./app ./bootsrap`
+  2. ensure all files are executable `chmod +x ./scripts/* ./app ./bootstrap`
   3. run `./app help`
 
 # Add new command
