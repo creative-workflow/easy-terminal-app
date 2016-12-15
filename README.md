@@ -12,8 +12,8 @@ It has **maximal comfort** because:
   * has a raw bash test infrastructure
 
 # Setup
-  1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
-  2. cd easy-terminal-app
+  1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
+  2. `cd easy-terminal-app`
   3. ensure all files are executable `chmod +x ./scripts/* ./app ./bootstrap`
   4. run `./app help`
 
