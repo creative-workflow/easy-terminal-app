@@ -12,9 +12,10 @@ It has **maximal comfort** because:
   * has a raw bash test infrastructure
 
 # Setup
-  1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract into your project folder
-  2. ensure all files are executable `chmod +x ./scripts/* ./app ./bootstrap`
-  3. run `./app help`
+  1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
+  2. cd easy-terminal-app
+  3. ensure all files are executable `chmod +x ./scripts/* ./app ./bootstrap`
+  4. run `./app help`
 
 # Add new command
 Create a new file in the folder `scripts/commands` named `ls` and add the following lines:
@@ -69,17 +70,11 @@ A test file executes some commands and it's exit code will be used to determine 
 
 
 # TODO
-  * add setup "one liner" to download and extract files from this repo
   * enhance testing by add some assert functions to `./scripts/lib/test`.
   * add tests for
     * `./scripts/lib/log`
     * `./scripts/lib/command`
     * `./scripts/lib/os`
-
-
-# CONTRIBUTING
-Feel free =)
-
 
 # CHANGELOG
 ### 1.0
