@@ -17,7 +17,7 @@ fi
 
 if [[ $is_osx == 1 ]] ; then
   # osx version of du, see scripts/lib/os
-  du -h -d 3 $path
+  du -h -d 1 $path
 else
   # unix version of du, see scripts/lib/os
   du -h --max-depth=1 $path
