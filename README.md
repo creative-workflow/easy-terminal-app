@@ -1,21 +1,21 @@
 # easy-terminal-app 1.0
 A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell)-scripting friends =)
 
-It is minimal because it only depends on standard bash.
+It is **minimal** because it only depends on standard bash.
 
-It has maximal comfort because:
+It has **maximal comfort** because:
   * easyly add commands by dropping files into a folder
   * has build in help and command listening
   * parses comments from your command file
   * has logging and colored output out of the box
   * has a test infrstructure
 
-# setup
-  1. [download](TODO) this repo and extract into your project folder
+# Setup
+  1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract into your project folder
   2. ensure all files are executable `chmod +x ./scripts/* ./app ./bootsrap`
   3. run `./app help`
 
-# add new command
+# Add new command
 Create a new file in the folder `scripts/commands` named `ls` and add the following lines:
 
 ```
@@ -35,7 +35,7 @@ Make sure your new commands is executable by running `chmod +x ./scripts/command
 And now your new command will be listed under help, run `./app help`.
 
 
-# use logging
+# Logging
 Logs are organised into one file per day in the folder `./logs`.
 
 ### show logs
@@ -55,7 +55,7 @@ Logs are organised into one file per day in the folder `./logs`.
   * disable this by opening the file `./bootstrap` and set `TERMINAL_APP_LOG_ENABLED` to `0`
 
 
-# tests
+# Testing
 Tests are located under `./scripts/test/*`. You can execute all tests by running `./app test`.
 
 ### add a tests
@@ -68,7 +68,7 @@ A test file executes some commands and it's exit code will be used to determine 
 
 
 # TODO
-  * add setup "one liner", download and extract files from this repo
+  * add setup "one liner" to download and extract files from this repo
   * enhance testing by add some assert functions to `./scripts/lib/test`.
   * add tests for
     * `./scripts/lib/log`
