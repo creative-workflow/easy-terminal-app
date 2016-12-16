@@ -1,15 +1,15 @@
 # easy-terminal-app 1.0 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
-A minimal "terminal-app" with maximum comfort for me, you and all of my [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
+A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
-This **terminal application skeleton** is ment for replacing endless switch-case instructions in controll scripts and reinventing the wheel again and again.
+This **terminal application skeleton** is ment for replacing endless switch-case instructions in control scripts and reinventing the wheel again and again.
 
 It is **minimal** because it only depends on standard bash.
 
 It has **maximal comfort** because:
   * easyly add commands by dropping files into a folder
-  * has build in help and command listening (greps the scripts for specific marks)
-  * has logging and colored output out of the box
-  * has a raw bash test infrastructure
+  * automatic help generation (greps the command scripts for specific marks)
+  * logging and colored output out of the box
+  * write tests for your scripts
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
