@@ -7,9 +7,11 @@ It is **minimal** because it only depends on standard [bash](https://de.wikipedi
 
 It has **maximal comfort** because:
   * easyly add a command by creating a simple bash script
+  * seperated config file for your scripts
   * automatic help generation (greps command scripts for specific marks)
   * logging and colored outputs ready to use
-  * you can write tests for your scripts and run with travis or similar
+  * write tests for your scripts and run with travis or similar
+  * simply adjust the scripts for your needs (all in all only 300 lines of app code) 
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
@@ -26,12 +28,16 @@ Available commands:
  logs                   show app logs
  ps                     show running processes
  test                   run tests
-
+ 
+Configuration:
+ edit ./bootstrap
+  
 Available libs: 
  color                  helps dealing with colors in terminal
  command                helps dispatching commands in scripts/commands/*
  log                    helps writing and reading app logs
  os                     helps detecting current os (exports $is_osx, $is_win, $is_linux)
+ 
 ```
 
 # Add new command
@@ -85,7 +91,7 @@ A test file executes some commands and it's exit code will be used to determine 
 
 # TODO
   * add advanced command creation guide
-  * enhance testing by adding assert functions to `./scripts/lib/test`.
+  * extend testing capabilities by adding assert functions to `./scripts/lib/test`.
   * add tests for
     * `./scripts/lib/log`
     * `./scripts/lib/command`
