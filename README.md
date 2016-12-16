@@ -6,10 +6,10 @@ This **terminal application skeleton** is ment for replacing endless switch-case
 It is **minimal** because it only depends on standard bash.
 
 It has **maximal comfort** because:
-  * easyly add commands by creating a simple bash script
-  * automatic help generation (greps the command scripts for specific marks)
+  * easyly add a command by creating a simple bash script
+  * automatic help generation (greps command scripts for specific marks)
   * logging and colored outputs ready to use
-  * write tests for your scripts
+  * you can write tests for your scripts and run with travis or similar
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
