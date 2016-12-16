@@ -3,7 +3,7 @@ A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](
 
 This **terminal application skeleton** is ment for replacing endless switch-case instructions in control scripts and reinventing the wheel again and again.
 
-It is **minimal** because it only depends on standard bash.
+It is **minimal** because it only depends on standard [bash](https://de.wikipedia.org/wiki/Bash_(Shell)).
 
 It has **maximal comfort** because:
   * easyly add a command by creating a simple bash script
