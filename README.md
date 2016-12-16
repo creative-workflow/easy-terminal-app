@@ -1,4 +1,4 @@
-# easy-terminal-app 1.0 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
+# easy-terminal-app 1.1 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
 This **terminal application skeleton** is ment for replacing endless switch-case instructions in control scripts and reinventing the wheel again and again.
@@ -11,7 +11,7 @@ It has **maximal comfort** because:
   * automatic help generation (greps command-scripts for specific marks)
   * logging and colored outputs ready to use
   * write tests for your scripts and run with travis or similar
-  * simply adjust the scripts for your needs (all in all only 300 lines of app code) 
+  * simply adjust the scripts for your needs (all in all only 300 lines of app code)
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
@@ -21,23 +21,23 @@ It has **maximal comfort** because:
 
 # Usage
 ```
-Usage: ./app [command] [help|*] 
-Available commands: 
+Usage: ./app [command] [help|*]
+Available commands:
  du                     show diskusage
  help                   print help
  logs                   show app logs
  ps                     show running processes
  test                   run tests
- 
+
 Configuration:
  edit ./bootstrap
-  
-Available libs: 
+
+Available libs:
  color                  helps dealing with colors in terminal
  command                helps dispatching commands in scripts/commands/*
  log                    helps writing and reading app logs
  os                     helps detecting current os (exports $is_osx, $is_win, $is_linux)
- 
+
 ```
 
 # Add new command
@@ -58,24 +58,21 @@ And now your new command will be listed under help, run `./app help`.
 
 
 # Logging
-Logs are organised into one file per day in the folder `./logs`.
+### use logging in your scripts
+  * `source bootstrap`
+  * `log_info "log entry"` displays green text in the terminal
+  * `log_debug "log entry"` displays orange text in the terminal
+  * `log_error "log entry"` displays red text in the terminal
+
+### enable log to file
+  * all log printed log entries will also be logged to file (`logs/[%m_%d_%Y].app.log`)
+  * enable this by opening the file `./bootstrap` and set `TERMINAL_APP_LOG_ENABLED` to `1`
 
 ### show logs
   * run `./app logs tail` to tail the latest log file
   * you can also pass params to tail: `./app logs tail -n100`
   * there is also `./app logs head` and `./app logs cat` available
   * to see the log command help run `./app logs help`
-
-### use logging in your scripts
-  * `source bootstrap`
-  * `log_info "log entry"` displays green text in the terminal and logs to file
-  * `log_debug "log entry"` displays orange text in the terminal and logs to file
-  * `log_error "log entry"` displays red text in the terminal and logs to file
-
-### disable logging to file (enabled per default)
-  * all log entries will be printed and also logged to `logs/[%m_%d_%Y].app.log` per default
-  * disable this by opening the file `./bootstrap` and set `TERMINAL_APP_LOG_ENABLED` to `0`
-
 
 # Testing
 Tests are located under `./scripts/test/*`. You can execute all tests by running `./app test`.
@@ -98,5 +95,11 @@ A test file executes some commands and it's exit code will be used to determine 
     * `./scripts/lib/os`
 
 # CHANGELOG
+### 1.1
+  * disable log to file per default
+  * dont create log folder if log to file is disabled
+  * add `say_ok` and `say_failed` to lib/color
+  * dont show lib info when printing help
+
 ### 1.0
   * initial release

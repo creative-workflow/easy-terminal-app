@@ -28,3 +28,11 @@ function white {
 function newline {
   echo ''
 }
+
+function say_ok {
+  green '✔'
+}
+
+function say_fail {
+  red '✘'
+}

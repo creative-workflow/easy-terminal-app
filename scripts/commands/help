@@ -15,14 +15,15 @@ do
 done
 
 newline
-green 'Available libs:'
 
-# list all available lib files
-for lib in "$TERMINAL_APP_LIB_PATH"/*
-do
-  # if not scripts/lib/lib file
-  if [ "$lib" != "$TERMINAL_APP_LIB_PATH/lib" ] ; then
-    # print lib info
-    lib_print_info $lib
-  fi
-done
+# green 'Available libs:'
+#
+# # list all available lib files
+# for lib in "$TERMINAL_APP_LIB_PATH"/*
+# do
+#   # if not scripts/lib/lib file
+#   if [ "$lib" != "$TERMINAL_APP_LIB_PATH/lib" ] ; then
+#     # print lib info
+#     lib_print_info $lib
+#   fi
+# done

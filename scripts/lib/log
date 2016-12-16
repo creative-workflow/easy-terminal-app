@@ -36,4 +36,6 @@ function log_set_current_file {
 }
 
 # initial set log file for other scripts
-log_set_current_file
+if [ $TERMINAL_APP_LOG_ENABLED == 1 ] ; then
+  log_set_current_file
+fi
