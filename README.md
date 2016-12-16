@@ -8,7 +8,7 @@ It is **minimal** because it only depends on standard [bash](https://de.wikipedi
 It has **maximal comfort** because:
   * easyly add a command by creating a simple bash script
   * seperated config file for your scripts
-  * automatic help generation (greps command scripts for specific marks)
+  * automatic help generation (greps command-scripts for specific marks)
   * logging and colored outputs ready to use
   * write tests for your scripts and run with travis or similar
   * simply adjust the scripts for your needs (all in all only 300 lines of app code) 
