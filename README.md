@@ -30,7 +30,7 @@ Available commands:
 Available libs: 
  color                  helps dealing with colors in terminal
  command                helps dispatching commands in scripts/commands/*
- log                    helps dealing with log files
+ log                    helps writing and reading app logs
  os                     helps detecting current os, exports $is_osx, $is_win, $is_li
 ```
 
