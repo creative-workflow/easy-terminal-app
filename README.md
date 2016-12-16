@@ -6,9 +6,9 @@ This **terminal application skeleton** is ment for replacing endless switch-case
 It is **minimal** because it only depends on standard bash.
 
 It has **maximal comfort** because:
-  * easyly add commands by dropping files into a folder
+  * easyly add commands by creating a simple bash script
   * automatic help generation (greps the command scripts for specific marks)
-  * logging and colored output out of the box
+  * logging and colored outputs ready to use
   * write tests for your scripts
 
 # Setup
@@ -40,8 +40,6 @@ Create a new file in the folder `scripts/commands` named `ls` and add the follow
 #!/bin/bash
 
 #command-info: show directory listening of .
-
-source bootstrap
 
 ls .
 ```
@@ -86,7 +84,8 @@ A test file executes some commands and it's exit code will be used to determine 
 
 
 # TODO
-  * enhance testing by add some assert functions to `./scripts/lib/test`.
+  * add advanced command creation guide
+  * enhance testing by adding assert functions to `./scripts/lib/test`.
   * add tests for
     * `./scripts/lib/log`
     * `./scripts/lib/command`
