@@ -100,6 +100,7 @@ A test file executes some commands and it's exit code will be used to determine 
   * dont create log folder if log to file is disabled
   * add `say_ok` and `say_failed` to lib/color
   * dont show lib info when printing help
+  * auto load all files in lib folder
 
 ### 1.0
   * initial release
