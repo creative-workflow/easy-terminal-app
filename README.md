@@ -65,7 +65,7 @@ And now your new command will be listed under help, run `./app help`.
   * `log_error "log entry"` displays red text in the terminal
 
 ### enable log to file
-  * all log printed log entries will also be logged to file (`logs/[%m_%d_%Y].app.log`)
+  * all log_* calls can also be logged to file (`./logs/[%m_%d_%Y].app.log`)
   * enable this by opening the file `./bootstrap` and set `TERMINAL_APP_LOG_ENABLED` to `1`
 
 ### show logs
