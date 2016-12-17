@@ -28,7 +28,7 @@ function test_after_suite {
     red "Failed: "
     red "$TEST_ERRORS"
 
-    exit 0
+    exit 1
   fi
 }
 
