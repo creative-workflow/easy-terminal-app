@@ -52,7 +52,6 @@ function test_exec_command {
   else
     test_add_success "OK: $test_command"
   fi
-
 }
 
 function test_add_error {
