@@ -2,8 +2,6 @@
 
 #lib-info: helps displaying lib info
 
-source "$TERMINAL_APP_LIB_PATH/color"
-
 function lib_print_info {
   command_path=$1
   command_name=$( basename $1 )

@@ -42,8 +42,8 @@ function command_exec {
       command_print_help $command_path
   fi
 
-  log_info "running command: $@"
   newline
+  log_info "running command: $@"
 
   $command_path ${@:2}
 }

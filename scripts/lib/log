@@ -2,8 +2,6 @@
 
 #lib-info: helps dealing with log files
 
-source "$TERMINAL_APP_LIB_PATH/color"
-
 function write_log {
   if [ $TERMINAL_APP_LOG_ENABLED == 1 ] ; then
     log_set_current_file

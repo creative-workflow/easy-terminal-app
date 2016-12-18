@@ -7,7 +7,6 @@ TEST_COUNT=0
 TEST_ERROR_COUNT=0
 TEST_SUCCESS_COUNT=0
 
-
 function test_run_suite {
   test_before_suite
   for test_path in "$TERMINAL_APP_TEST_PATH"/*

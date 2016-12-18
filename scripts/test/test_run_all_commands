@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#test-info: execute all app commands without error
+
+source bootstrap
+
+# load lib scripts
+for command_name in "$TERMINAL_APP_COMMAND_PATH"/*
+do
+
+  if [ $(basename $command_name) != "test" ] ; then
+    # if you dont call a script
+    # test_exec_command "./app $(basename $command_name)"
+    ./app $(basename $command_name)
+  fi
+
+  if [ $? -ne 0 ]; then
+    test_add_error "   $test_command exited with code $?"
+  else
+    test_add_success "OK: ./app $(basename $command_name)"
+  fi
+
+done
