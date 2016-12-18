@@ -1,17 +1,16 @@
 # easy-terminal-app 1.1 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
-This **terminal application skeleton** is meant for replacing endless switch-case instructions in control scripts and reinventing the wheel again and again.
+This **terminal application skeleton** is meant for replacing endless switch-case instructions in your control-scripts. Why reinventing the wheel again and again.
 
 It is **minimal** because it only depends on standard [bash](https://de.wikipedia.org/wiki/Bash_(Shell)).
 
 It has **maximal comfort** because:
-  * easyly add a command by creating a simple bash script
-  * seperated config file for your scripts
-  * automatic help generation (greps command-scripts for specific marks)
-  * logging and colored outputs ready to use
+  * easyly add a commands by creating bash scripts in a certain folder
+  * automatic usage generation (greps command-scripts for specific markers)
+  * use logging and colored outputs in your scripts
   * write tests for your scripts and run with travis or similar
-  * simply adjust the scripts for your needs (all in all only 300 lines of app code)
+  * easy customizing (ca. 300 lines of structured bash code)
 
 # Setup
   1. [download](https://github.com/creative-workflow/easy-terminal-app/archive/master.zip) this repo and extract or run `git clone https://github.com/creative-workflow/easy-terminal-app.git`
@@ -78,7 +77,7 @@ And now your new command will be listed under help, run `./app help`.
 Tests are located under `./scripts/test/*`. You can execute all tests by running `./app test`.
 
 ### add a tests
-Just duplicate the file `./scripts/test/test_help_command` and write your test.
+Just duplicate the file `./scripts/test/test_help_command` and write your own test.
 
 Make sure your new test is executable by running `chmod +x ./scripts/test/*`.
 
