@@ -1,4 +1,4 @@
-# easy-terminal-app 1.1 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
+# easy-terminal-app 1.2 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
 This **terminal application skeleton** is meant for replacing endless switch-case instructions in your control-scripts. Why reinventing the wheel again and again.
@@ -25,17 +25,18 @@ Available commands:
  du                     show diskusage
  help                   print help
  logs                   show app logs
- ps                     show running processes
  test                   run tests
 
 Configuration:
- edit ./bootstrap
+ * edit `./bootstrap` for public configurations
+ * create your private `./bootstrap.local` file to store sensitive data (make sure you add bootstrap.local to your `.gitignore` file ;)
 
 Available libs:
  color                  helps dealing with colors in terminal
  command                helps dispatching commands in scripts/commands/*
  log                    helps writing and reading app logs
  os                     helps detecting current os (exports $is_osx, $is_win, $is_linux)
+ test                   helper for running tests
 
 ```
 
@@ -88,12 +89,13 @@ A test file executes some commands and it's exit code will be used to determine 
 # TODO
   * add advanced command creation guide
   * extend testing capabilities by adding assert functions to `./scripts/lib/test`.
-  * add tests for
-    * `./scripts/lib/log`
-    * `./scripts/lib/command`
-    * `./scripts/lib/os`
+
 
 # CHANGELOG
+### 1.2
+  * run all commands when testing
+  * source 'bootstrap.local' if present and add to gitingore
+
 ### 1.1
   * disable log to file per default
   * dont create log folder if log to file is disabled

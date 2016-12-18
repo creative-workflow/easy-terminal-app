@@ -12,6 +12,13 @@ export TERMINAL_APP_LIB_PATH="$TERMINAL_APP_PATH/lib"
 export TERMINAL_APP_TEST_PATH="$TERMINAL_APP_PATH/test"
 export TERMINAL_APP_COMMAND_PATH="$TERMINAL_APP_PATH/commands"
 
+# you can put you very private config into a file
+# named 'bootstrap.local' and add it to your git ginore file
+if [ -f 'bootstrap.local' ];
+then
+   source 'bootstrap.local'
+fi
+
 # load lib scripts
 for lib_file in $TERMINAL_APP_LIB_PATH/*
 do

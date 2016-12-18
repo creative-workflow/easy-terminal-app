@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#lib-info: helper for tests
+#lib-info: helper for running tests
 
 TEST_ERRORS=''
 TEST_COUNT=0
