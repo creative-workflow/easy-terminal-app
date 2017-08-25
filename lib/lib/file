@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#lib-info: helps managing files
+
+function file_append {
+  file="$1"
+  input="$2"
+
+  echo "$input" >> "$file"
+}
+
+function file_prepend {
+  file="$1"
+  input="$2"
+
+  echo -e "$input\n$(cat "$file")" > "$file"
+}
+
+function file_append_newline {
+  file="$1"
+
+  echo '' >> "$file"
+}
+
+function file_clear {
+  file="$1"
+
+  > "$file"
+}
+
+function file_delete {
+  file="$1"
+
+  rm -rf "$file"
+}
+
+function file_move {
+  from="$1"
+  to="$2"
+
+  mv "$from" "$to"
+}
+
+function file_copy {
+  from="$1"
+  to="$2"
+
+  mkdir -p "$(basename "$to")"
+  cp "$from" "$to"
+}

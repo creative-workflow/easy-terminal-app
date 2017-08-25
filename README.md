@@ -92,6 +92,10 @@ A test file executes some commands and it's exit code will be used to determine 
 
 
 # CHANGELOG
+### 1.4
+  * hide commands that start with `_`
+  * add helper for file handling in `lib/lib/file`
+
 ### 1.3
   * use absolut path every where, so recursion will be no problem
   * rename `scripts` folder to `lib`
