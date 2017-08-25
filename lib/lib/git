@@ -1,0 +1,33 @@
+ #!/bin/bash
+
+source "$TERMINAL_APP_LIB_PATH/color"
+
+function git_force_push_subtree {
+  origin=$1
+  subfolder=$2
+  git push $origin `git subtree split --prefix $subfolder master`:master --force
+}
+
+function git_ensure_local_repo_clean {
+  echo -ne "local git repository clean? "
+  if [[ -z $(git status -s) ]] ; then
+    say_ok
+  else
+    say_fail
+    red "tree is dirty, please commit changes before running this"
+    exit 1
+  fi
+}
+
+function git_ensure_local_repo_up_to_date {
+  echo -ne "local git repository up to date? "
+  git fetch origin 2>/dev/null
+  reslog=$(git status -u | grep -i 'use "git pull" to')
+  if [[ "${reslog}" != "" ]] ; then
+    say_fail
+    red 'You need to pull/merge the remote repository.'
+    exit 1
+  else
+    say_ok
+  fi
+}

@@ -1,2 +1,3 @@
 logs/
-bootstrap.local
+app.bootstrap.local
+.DS_Store

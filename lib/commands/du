@@ -4,7 +4,7 @@
 
 #command-help: usage: ./app du [path='.']
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 if [ "x$1" == "x" ] ; then
   # if no arg given: use current path

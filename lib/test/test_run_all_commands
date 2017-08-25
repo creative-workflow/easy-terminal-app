@@ -2,7 +2,7 @@
 
 #test-info: execute all app commands without error
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 # load lib scripts
 for command_name in "$TERMINAL_APP_COMMAND_PATH"/*

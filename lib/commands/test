@@ -2,7 +2,7 @@
 
 #command-info: run tests
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 source "$TERMINAL_APP_LIB_PATH/test"
 

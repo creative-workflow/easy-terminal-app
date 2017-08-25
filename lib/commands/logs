@@ -9,7 +9,7 @@
 #command-help:   head  (see ´man tail´)
 #command-help:   tail  (see ´man tail´, *default)
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 # ensure the logfile exists and set path, see scripts/lib/log
 log_set_current_file

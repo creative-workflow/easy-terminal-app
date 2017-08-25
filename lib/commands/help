@@ -2,7 +2,7 @@
 
 #command-info: print help
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 orange 'Usage: ./app [command] [help|*]'
 green 'Available commands:'

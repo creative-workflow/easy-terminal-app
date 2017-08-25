@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#lib-info: helps handling mysql databses
+
+source "$TERMINAL_APP_LIB_PATH/color"
+
+function ssh_upload {
+  from=$1
+  to=$2
+
+  ssh_mkdir $(dirname $to)
+
+  scp -Cr $from $SSH_SERVER_LOGIN:$to
+}
+
+function ssh_mkdir {
+  ssh $SSH_SERVER_LOGIN "mkdir -p $1"
+}
+
+function ssh_download {
+  from=$1
+  to=$2
+
+  mkdir -p $(dirname $to)
+
+  scp -Cr $SSH_SERVER_LOGIN:$from $to
+}
+
+function ssh_run {
+  ssh $SSH_SERVER_LOGIN $@
+}

@@ -2,6 +2,6 @@
 
 #command-info: simply run 'ls' in current folder
 
-source bootstrap
+source "$TERMINAL_PATH/app.bootstrap"
 
 ls .
