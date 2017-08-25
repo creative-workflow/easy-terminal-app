@@ -3,9 +3,9 @@
 source "$TERMINAL_APP_LIB_PATH/color"
 
 function git_force_push_subtree {
-  origin=$1
-  subfolder=$2
-  git push $origin `git subtree split --prefix $subfolder master`:master --force
+  __origin=$1
+  __subfolder=$2
+  git push $__origin `git subtree split --prefix $__subfolder master`:master --force
 }
 
 function git_ensure_local_repo_clean {

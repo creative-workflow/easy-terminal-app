@@ -1,4 +1,4 @@
-# easy-terminal-app 1.3 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
+# easy-terminal-app 1.5 [![Build Status](https://travis-ci.org/creative-workflow/easy-terminal-app.svg?branch=master)](https://travis-ci.org/creative-workflow/easy-terminal-app)
 A minimal "terminal-app" with maximum comfort for me, you and all of our [bash](https://de.wikipedia.org/wiki/Bash_(Shell))-scripting friends =)
 
 This **terminal application skeleton** is meant for replacing endless switch-case instructions in your control-scripts. Why reinventing the wheel again and again.
@@ -92,6 +92,9 @@ A test file executes some commands and it's exit code will be used to determine 
 
 
 # CHANGELOG
+### 1.5
+  * prefix lib function variables with `__`, less clashes
+
 ### 1.4
   * hide commands that start with `_`
   * add helper for file handling in `lib/lib/file`

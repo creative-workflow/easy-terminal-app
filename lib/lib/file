@@ -3,48 +3,49 @@
 #lib-info: helps managing files
 
 function file_append {
-  file="$1"
-  input="$2"
+  __file="$1"
+  __input="$2"
 
-  echo "$input" >> "$file"
+  echo "$__input" >> "$__file"
 }
 
 function file_prepend {
-  file="$1"
-  input="$2"
+  __file="$1"
+  __input="$2"
 
-  echo -e "$input\n$(cat "$file")" > "$file"
+  echo -e "$__input\n$(cat "$__file")" > "$__file"
 }
 
 function file_append_newline {
-  file="$1"
+  __file="$1"
 
-  echo '' >> "$file"
+  echo '' >> "$__file"
 }
 
 function file_clear {
-  file="$1"
+  __file="$1"
 
-  > "$file"
+  touch "$__file"
+  > "$__file"
 }
 
 function file_delete {
-  file="$1"
+  __file="$1"
 
-  rm -rf "$file"
+  rm -rf "$__file"
 }
 
 function file_move {
-  from="$1"
-  to="$2"
+  __from="$1"
+  __to="$2"
 
-  mv "$from" "$to"
+  mv "$__from" "$__to"
 }
 
 function file_copy {
-  from="$1"
-  to="$2"
+  __from="$__1"
+  __to="$__2"
 
-  mkdir -p "$(basename "$to")"
-  cp "$from" "$to"
+  mkdir -p "$(basename "$__to")"
+  cp "$__from" "$__to"
 }

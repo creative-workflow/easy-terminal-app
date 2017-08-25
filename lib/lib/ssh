@@ -5,12 +5,12 @@
 source "$TERMINAL_APP_LIB_PATH/color"
 
 function ssh_upload {
-  from=$1
-  to=$2
+  __from=$1
+  __to=$2
 
-  ssh_mkdir $(dirname $to)
+  ssh_mkdir $(dirname $__to)
 
-  scp -Cr $from $SSH_SERVER_LOGIN:$to
+  scp -Cr $__from $SSH_SERVER_LOGIN:$__to
 }
 
 function ssh_mkdir {
@@ -18,12 +18,12 @@ function ssh_mkdir {
 }
 
 function ssh_download {
-  from=$1
-  to=$2
+  __from=$1
+  __to=$2
 
-  mkdir -p $(dirname $to)
+  mkdir -p $(dirname $__to)
 
-  scp -Cr $SSH_SERVER_LOGIN:$from $to
+  scp -Cr $SSH_SERVER_LOGIN:$__from $__to
 }
 
 function ssh_run {

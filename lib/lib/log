@@ -5,9 +5,9 @@
 function write_log {
   if [ $TERMINAL_APP_LOG_ENABLED == 1 ] ; then
     log_set_current_file
-    now=$(date +"%H:%I:%S")
+    __now=$(date +"%H:%I:%S")
 
-    echo "[$now] $1" >> "$TERMINAL_APP_LOG_FILE"
+    echo "[$__now] $1" >> "$TERMINAL_APP_LOG_FILE"
   fi
 }
 
@@ -28,8 +28,8 @@ function log_error {
 
 function log_set_current_file {
   mkdir -p "$TERMINAL_APP_LOG_PATH"
-  day=$(date +"%m_%d_%Y")
-  export TERMINAL_APP_LOG_FILE="$TERMINAL_APP_LOG_PATH/$day.app.log"
+  __day=$(date +"%m_%d_%Y")
+  export TERMINAL_APP_LOG_FILE="$TERMINAL_APP_LOG_PATH/$__day.app.log"
   touch "$TERMINAL_APP_LOG_FILE"
 }
 
