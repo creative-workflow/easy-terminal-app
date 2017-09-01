@@ -56,8 +56,6 @@ function file_path_to_name {
 
   __path=$( echo $(basename "$__path") ) # use last segment
 
-  __path=$(echo "$__path" | sed 's/[0-9]\{2\}_/ => /g')
-
   __path=$(echo "$__path" | tr '-' ' ') # whitespace to -
   __path=$(echo "$__path" | tr '_' '/') # replace _ with /
 
