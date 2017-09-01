@@ -49,3 +49,35 @@ function file_copy {
   mkdir -p "$(basename "$__to")"
   cp "$__from" "$__to"
 }
+
+
+function file_path_to_name {
+  __path="$1"
+
+  __path=$( echo $(basename "$__path") ) # use last segment
+
+  __path=$(echo "$__path" | sed 's/[0-9]\{2\}_/ => /g')
+
+  __path=$(echo "$__path" | tr '-' ' ') # whitespace to -
+  __path=$(echo "$__path" | tr '_' '/') # replace _ with /
+
+  __path=${__path/.md/ } # strip .md ending
+
+  # uc first all words
+  __path=$(awk '{for(i=0;++i<=NF;){OFS=(i==NF)?RS:FS;printf toupper(substr($i,0,1)) substr($i,2) OFS }}' <<< "$__path")
+
+  echo "$__path"
+}
+
+function file_name_to_path {
+  __path="$1"
+
+  __path=$( echo "$__path" | tr '[:upper:]' '[:lower:]' ) # lowercase
+
+  __path=$(echo "$__path" | tr ' ' '-') # eleminate whitespaces
+  __path=$(echo "$__path" | tr '/' '_') # replace / with _
+
+  __path=${__path/.md/ } # strip .md ending
+
+  echo "$__path"
+}
